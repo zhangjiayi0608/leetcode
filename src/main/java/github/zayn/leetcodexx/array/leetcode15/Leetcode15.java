@@ -20,7 +20,7 @@ public class Leetcode15 {
             if (nums[i] > 1) {
                 break;
             }
-            if (i>0&&nums[i] == nums[i - 1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
             int l = i + 1;
@@ -51,7 +51,7 @@ public class Leetcode15 {
 
     public static void main(String[] args) {
         Leetcode15 leetcode15 = new Leetcode15();
-        List<List<Integer>> lists = leetcode15.threeSum(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7});
+        List<List<Integer>> lists = leetcode15.threeSum(new int[]{-1, 0, 1, 2, -1, -4});
         System.out.println(lists);
     }
 }
