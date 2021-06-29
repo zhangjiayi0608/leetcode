@@ -1,7 +1,7 @@
 package github.zayn.leetcodexx.leetcode31;
 
 /**
- * @ClassName NextPermutation
+ * @ClassName NextPermutation 下一个排列
  * @DESCRIPTION [1, 5, 8, 4, 7, 6, 5, 3, 1]
  * @Author zhangjiayi07
  * @Date 2021/6/13 7:31 下午
