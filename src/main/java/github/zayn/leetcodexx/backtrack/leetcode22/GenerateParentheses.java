@@ -1,4 +1,4 @@
-package github.zayn.leetcodexx.stack.leetcode21;
+package github.zayn.leetcodexx.backtrack.leetcode22;
 
 import java.util.ArrayList;
 import java.util.List;
