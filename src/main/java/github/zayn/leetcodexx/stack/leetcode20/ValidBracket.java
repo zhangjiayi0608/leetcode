@@ -18,7 +18,7 @@ public class ValidBracket {
 
     public boolean isValid(String s) {
         int length = s.length();
-        Deque<Character> deque = new ArrayDeque();
+        Deque<Character> deque = new ArrayDeque<>();
         for (int i = 0; i < length; i++) {
             char c = s.charAt(i);
             if (LEFT_SET.contains(c)) {
