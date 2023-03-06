@@ -1,10 +1,10 @@
 package github.zayn.leetcodexx.list.leetcode19;
 
-public class ListNode {
-    int val;
-    ListNode next;
+class ListNode {
+    ListNode next = null;
+    int data;
 
-    ListNode(int x) {
-        val = x;
+    public ListNode(int data) {
+        this.data = data;
     }
 }

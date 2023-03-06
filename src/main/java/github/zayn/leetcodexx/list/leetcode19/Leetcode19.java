@@ -1,5 +1,6 @@
 package github.zayn.leetcodexx.list.leetcode19;
 
+
 /**
  * 两个指针，一个先走n步，然后两个指针一起走，先走的走n步，然后一起走，start走到头，后走的end.next = end.next.next;就行
  */

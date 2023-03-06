@@ -1,4 +1,4 @@
-package github.zayn.leetcodexx.stack;
+package github.zayn.leetcodexx.stack.rpn;
 
 import java.util.Deque;
 import java.util.HashSet;
