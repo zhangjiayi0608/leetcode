@@ -3,11 +3,12 @@ package github.zayn.leetcodexx.sort;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 1, 3, 4, 8, 7, 6};
-        int[] ret = bubbleSortV2(arr);
-        System.out.println(ret);
+        bubbleSortV3(arr);
+
+        System.out.println(arr);
     }
 
-    private static int[] bubbleSort(int[] arr) {
+    private static void bubbleSort(int[] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -15,15 +16,15 @@ public class BubbleSort {
                 }
             }
         }
-        return arr;
     }
 
     /**
      * 可以提前退出的冒泡
+     *
      * @param arr
      * @return
      */
-    private static int[] bubbleSortV2(int[] arr) {
+    private static void bubbleSortV2(int[] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
             //提前退出冒泡循环标志位
             boolean flag = false;
@@ -35,6 +36,16 @@ public class BubbleSort {
             }
             if (!flag) {
                 break;
+            }
+        }
+    }
+
+    private static int[] bubbleSortV3(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
             }
         }
         return arr;
