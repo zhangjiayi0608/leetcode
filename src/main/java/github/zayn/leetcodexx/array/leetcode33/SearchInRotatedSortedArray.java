@@ -17,28 +17,33 @@ package github.zayn.leetcodexx.array.leetcode33;
 public class SearchInRotatedSortedArray {
     public int search(int[] nums, int target) {
         int length = nums.length;
-        int end = length - 1;
         int result = -1;
-        if (nums[0] <= target) {
-            for (int i = 0; i < length; i++) {
-                if (nums[i] == target) {
-                    result = i;
+        int l = 0, r = length - 1;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (target == nums[mid]) {
+                result = mid;
+            }
+            if (nums[0] < nums[mid]) {
+                if (nums[0] <= target && target < nums[mid]) {
+                    r = mid - 1;
+                } else {
+                    l = mid + 1;
+                }
+            } else {
+                if (nums[mid] < target && target <= nums[length - 1]) {
+                    l = mid + 1;
+                } else {
+                    r = mid - 1;
                 }
             }
-        } else if (nums[end] >= target) {
-            for (int j = length - 1; j > 0; j--) {
-                if (nums[j] == target) {
-                    result = j;
-                }
-            }
-        } else {
         }
         return result;
     }
 
     public static void main(String[] args) {
         SearchInRotatedSortedArray solution = new SearchInRotatedSortedArray();
-        int search = solution.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3);
+        int search = solution.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0);
         System.out.println(search);
     }
 }

@@ -1,4 +1,4 @@
-package github.zayn.leetcodexx.tree.leetcode226;
+package github.zayn.leetcodexx.tree;
 
 public class TreeNode {
     int val;
@@ -8,5 +8,4 @@ public class TreeNode {
     public TreeNode(int val) {
         this.val = val;
     }
-
 }

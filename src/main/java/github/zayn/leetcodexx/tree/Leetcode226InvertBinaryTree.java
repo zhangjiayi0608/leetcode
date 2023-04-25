@@ -1,4 +1,4 @@
-package github.zayn.leetcodexx.tree.leetcode226;
+package github.zayn.leetcodexx.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,7 +8,7 @@ import java.util.Stack;
 /**
  * leetcode226
  */
-public class InvertBinaryTree {
+public class Leetcode226InvertBinaryTree {
     public TreeNode invertTreeByStack(TreeNode root) {
         if (root == null) {
             return root;

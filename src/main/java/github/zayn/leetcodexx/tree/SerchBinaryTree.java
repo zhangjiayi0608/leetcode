@@ -1,4 +1,4 @@
-package github.zayn.leetcodexx.tree.leetcode95;
+package github.zayn.leetcodexx.tree;
 
 import java.util.List;
 
