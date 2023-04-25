@@ -9,7 +9,7 @@ import java.util.Queue;
  * leetCode 102
  * 二叉树的层次遍历
  */
-public class LeetCode102BFS {
+public class Leetcode102BFS {
     /**
      * 递归
      */
@@ -72,7 +72,7 @@ public class LeetCode102BFS {
     public static void main(String[] args) {
         Integer[] a = {3, 9, 20, null, null, 15, 7};
         TreeNode treeNode = TreeNodeUtils.createTreeNode(a);
-        LeetCode102BFS leetCode102Bfs = new LeetCode102BFS();
+        Leetcode102BFS leetCode102Bfs = new Leetcode102BFS();
         List<List<Integer>> lists = leetCode102Bfs.levelOrderV2(treeNode);
         System.out.println();
     }

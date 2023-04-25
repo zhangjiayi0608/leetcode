@@ -7,7 +7,7 @@ import java.util.List;
  * leetcode95
  * 不同的二叉搜索树
  */
-public class SerchBinaryTree {
+public class Leetcode95SerchBinaryTree {
     public List<TreeNode> generateTrees(int n) {
         return null;
     }
