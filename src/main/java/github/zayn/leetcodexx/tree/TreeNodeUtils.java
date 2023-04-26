@@ -16,7 +16,7 @@ public class TreeNodeUtils {
             return null;
         }
         Integer value = arr[index - 1];
-        if(value == null){
+        if (value == null) {
             return null;
         }
         TreeNode node = new TreeNode(value);
@@ -24,5 +24,27 @@ public class TreeNodeUtils {
         node.right = createTreeNode(arr, index * 2 + 1);
         return node;
     }
-    
+
+    public static Integer[] tree2Arr(TreeNode root) {
+        Integer[] result = new Integer[1000];
+        preOrder(root, result, 1);
+        return result;
+    }
+
+    private static void preOrder(TreeNode root, Integer[] arr, int index) {
+        if (root != null) {
+            arr[index - 1] = root.val;
+            if (root.left != null) {
+                preOrder(root.left, arr, ++index);
+            }
+            if (root.right != null) {
+                preOrder(root.right, arr, ++index);
+            }
+        } else {
+            arr[index - 1] = null;
+            ++index;
+        }
+    }
+
+
 }

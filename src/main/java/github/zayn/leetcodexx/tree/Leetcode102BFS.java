@@ -38,11 +38,11 @@ public class Leetcode102BFS {
 
 
     /**
-     * 用栈
+     * 用队列
      *
      * @param
      */
-    public List<List<Integer>> levelOrderV2(TreeNode root) {
+    public List<List<Integer>> levelOrderByQueue(TreeNode root) {
         List<List<Integer>> levels = new ArrayList<List<Integer>>();
         if (root == null) {
             return levels;
@@ -73,7 +73,7 @@ public class Leetcode102BFS {
         Integer[] a = {3, 9, 20, null, null, 15, 7};
         TreeNode treeNode = TreeNodeUtils.createTreeNode(a);
         Leetcode102BFS leetCode102Bfs = new Leetcode102BFS();
-        List<List<Integer>> lists = leetCode102Bfs.levelOrderV2(treeNode);
+        List<List<Integer>> lists = leetCode102Bfs.levelOrderByQueue(treeNode);
         System.out.println();
     }
 
