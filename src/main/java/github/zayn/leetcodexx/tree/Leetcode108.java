@@ -20,9 +20,8 @@ package github.zayn.leetcodexx.tree;
  * @Date 2023/4/25 2:40 PM
  **/
 public class Leetcode108 {
-    
-    
-    
+
+
     //-----------------分割线-----------------------------------
     //错误的做法，为啥错？因为不是高度平衡的二叉搜索树
     public TreeNode sortedArrayToBST(int[] nums) {
@@ -55,10 +54,28 @@ public class Leetcode108 {
         }
     }
 //------------------分割线end-------------------------
-    
-    
+
+
+    //直接搞中序遍历的二叉搜索树
+    public TreeNode sortedArrayToBSTV2(int[] nums) {
+        int size = nums.length;
+        TreeNode treeNode = buildBSTV2(nums, 0, size - 1);
+        return treeNode;
+    }
+
+    private TreeNode buildBSTV2(int[] nums, int left, int right) {
+        if (left > right) {
+            return null;
+        }
+        int mid = (left + right) / 2;
+        TreeNode root = new TreeNode(mid);
+        root.left = buildBSTV2(nums, left, mid - 1);
+        root.right = buildBSTV2(nums, mid + 1, right);
+        return root;
+    }
+
     public static void main(String[] args) {
-        int[] a = {0,1,2,3,4,5};
+        int[] a = {0, 1, 2, 3, 4, 5};
         Leetcode108 leetcode108 = new Leetcode108();
         TreeNode treeNode = leetcode108.sortedArrayToBST(a);
         System.out.println();
