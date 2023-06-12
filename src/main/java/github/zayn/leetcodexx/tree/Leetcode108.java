@@ -67,6 +67,7 @@ public class Leetcode108 {
         if (left > right) {
             return null;
         }
+        //每次都找中间点，相当于反中序遍历
         int mid = (left + right) / 2;
         TreeNode root = new TreeNode(mid);
         root.left = buildBSTV2(nums, left, mid - 1);

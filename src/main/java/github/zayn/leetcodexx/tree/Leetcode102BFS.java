@@ -56,10 +56,10 @@ public class Leetcode102BFS {
                 TreeNode pop = queue.poll();
                 level.add(pop.val);
                 if (pop.left != null) {
-                    queue.add(pop.left);
+                    queue.offer(pop.left);
                 }
                 if (pop.right != null) {
-                    queue.add(pop.right);
+                    queue.offer(pop.right);
                 }
             }
             levels.add(level);

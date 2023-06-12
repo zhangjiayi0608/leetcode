@@ -18,7 +18,7 @@ public class QuickSort {
 
     private static void quickSortInternally(int[] arr, int left, int right) {
         if (left < right) {
-            int partitionIndex = partitionV3(arr, left, right);
+            int partitionIndex = partition(arr, left, right);
             quickSortInternally(arr, left, partitionIndex - 1);
             quickSortInternally(arr, partitionIndex + 1, right);
         }
@@ -39,35 +39,6 @@ public class QuickSort {
         return index - 1;
     }
 
-    //获取分区点的函数
-    private static int partitionV2(int[] arr, int left, int right) {
-        //设置基准值
-        int pivot = arr[right];
-        int index = left;
-        for (int j = left; j <= right; j++) {
-            if (arr[j] < pivot) {
-                swap(arr, index, j);
-                index++;
-            }
-        }
-        swap(arr, index, right);
-        return index;
-    }
-
-    //获取分区点的函数
-    private static int partitionV3(int[] arr, int left, int right) {
-        //设置基准值
-        int pivot = arr[left];
-        int index = right;
-        for (int i = index; i >= left + 1; i--) {
-            if (arr[i] > pivot) {
-                swap(arr, i, index);
-                index--;
-            }
-        }
-        swap(arr, left, index);
-        return index;
-    }
 
     //随机法获取分区点的函数
     private static int randomPartition(int[] arr, int left, int right) {

@@ -60,17 +60,17 @@ public class Leetcode94TravelBinaryTree {
     //前序递归
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> preorderRes = new ArrayList<>();
-        preorderHelper(root,preorderRes);
+        preOrderHelper(root,preorderRes);
         return preorderRes;
     }
-    public void preorderHelper(TreeNode root, List<Integer>preorderRes){
+    public void preOrderHelper(TreeNode root, List<Integer>preorderRes){
         if (root != null) {
             preorderRes.add(root.val);
             if (root.left != null) {
-                preorderHelper(root.left,preorderRes);
+                preOrderHelper(root.left,preorderRes);
             }
             if (root.right!=null){
-                preorderHelper(root.right,preorderRes);
+                preOrderHelper(root.right,preorderRes);
             }
         }
     }

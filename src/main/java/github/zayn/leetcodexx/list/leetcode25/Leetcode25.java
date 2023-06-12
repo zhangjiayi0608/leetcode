@@ -28,6 +28,7 @@ public class Leetcode25 {
         Node pre = dummy;
         Node end = dummy;
         while (end.next != null) {
+            //先把end放到第k个上面
             for (int i = 0; i < k && end != null; i++) {
                 end = end.next;
             }
