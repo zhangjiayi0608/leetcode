@@ -35,6 +35,6 @@ public class leetcode200 {
     }
 
     private boolean inArea(char[][] grid, int r, int c) {
-        return r >= 0 && r <= grid.length && c >= 0 && c <= grid[0].length;
+        return r >= 0 && r < grid.length && c >= 0 && c < grid[0].length;
     }
 }
