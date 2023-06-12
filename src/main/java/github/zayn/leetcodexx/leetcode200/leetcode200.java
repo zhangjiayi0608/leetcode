@@ -7,7 +7,7 @@ package github.zayn.leetcodexx.leetcode200;
  * @Date 2023/6/10 3:38 PM
  **/
 public class leetcode200 {
-    public int numIslands(char[][] grid) {
+    public static int numIslands(char[][] grid) {
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
@@ -20,7 +20,7 @@ public class leetcode200 {
         return count;
     }
 
-    private void dfs(char[][] grid, int r, int c) {
+    private static void dfs(char[][] grid, int r, int c) {
         if (!inArea(grid, r, c)) {
             return;
         }
@@ -34,7 +34,12 @@ public class leetcode200 {
         dfs(grid, r, c + 1);
     }
 
-    private boolean inArea(char[][] grid, int r, int c) {
+    private static boolean inArea(char[][] grid, int r, int c) {
         return r >= 0 && r < grid.length && c >= 0 && c < grid[0].length;
+    }
+
+    public static void main(String[] args) {
+        char a[][]={{1,2,3},{4,5,6}};
+        numIslands(a);
     }
 }
